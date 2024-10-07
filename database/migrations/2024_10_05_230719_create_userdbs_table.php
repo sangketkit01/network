@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('day')->nullable();
             $table->string('month')->nullable();
             $table->integer('year')->nullable();
+            $table->string('sex')->nullable();
             $table->timestamps();
         });
     }

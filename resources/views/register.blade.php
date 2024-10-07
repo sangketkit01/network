@@ -36,7 +36,8 @@
                 <p class="text-body-secondary">ง่ายและเร็ว</p>
                 <hr>
 
-                <form action="{{ route('regist') }}" method="POST">
+                <form action="{{ route('regist') }}" method="get">
+                    @csrf
                     <div class="input-container">
                         <input class="form-1 me-2" placeholder="ชื่อ" type="text" data-bs-toggle="tooltip"
                             data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="คุณชื่ออะไร"

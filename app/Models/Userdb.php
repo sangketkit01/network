@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
+use App\Rules\EmailOrPhone;
+
 class Userdb extends Model
 {
     use HasFactory;
@@ -16,16 +18,16 @@ class Userdb extends Model
     public function register(Request $request)
     {
         // Validate ฟอร์ม
-        $request->validate([
-            'f_name' => 'required',
-            'l_name' => 'required',
-            'day' => 'required|integer',
-            'month' => 'required|string',
-            'year' => 'required|integer',
-            'sex' => 'required',
-            'username' => 'required|email_or_phone',
-            'password' => 'required|min:6',
-        ]);
+        // $request->validate([
+        //     'f_name' => 'required',
+        //     'l_name' => 'required',
+        //     'day' => 'required|integer',
+        //     'month' => 'required|string',
+        //     'year' => 'required|integer',
+        //     'sex' => 'required',
+        //     'username' => ['required', new EmailOrPhone()],
+        //     'password' => 'required|min:6',
+        // ]);
     
         // เก็บข้อมูลลงในฐานข้อมูล
         DB::table('userdbs')->insert([
@@ -37,12 +39,11 @@ class Userdb extends Model
             'month' => $request->month,
             'year' => $request->year,
             'sex' => $request->sex,
-            'contact' => $request->contact,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
     
-        return redirect()->route('home')->with('success', 'Registration complete!');
+        return redirect()->back()->with('success', 'Registration complete!');
     }
     
 

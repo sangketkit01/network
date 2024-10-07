@@ -12,5 +12,5 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::post('/register/update', [Userdb::class, "register"])->name('regist');
+Route::get('/register/update', [Userdb::class, "register"])->name('regist');
 
