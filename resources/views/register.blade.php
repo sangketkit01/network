@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมัครใช้งาน Facebook</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{url('img/icon.ico')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('img/icon.png') }}">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <style>
-        
+
     </style>
 </head>
 
@@ -30,7 +30,7 @@
 
     <div class="container">
         <div class="d-flex flex-column justify-content-center">
-            <img src="{{url('img/logo.svg')}}" class="mt-4" alt="Facebook">
+            <img src="{{ url('img/logo.svg') }}" class="mt-4" alt="Facebook">
             <div class="border text-center mt-4 box-1">
                 <h3 class="fw-bold mt-2" style="margin-bottom: 0;">สร้างบัญชีใหม่</h3>
                 <p class="text-body-secondary">ง่ายและเร็ว</p>
@@ -38,23 +38,24 @@
 
                 <form action="1.html">
                     <div class="input-container">
-                        <input class="form-1 me-2" placeholder="ชื่อ" type="text" 
-                            data-bs-toggle="tooltip" data-bs-placement="left"
-                            data-bs-custom-class="custom-tooltip"
-                            data-bs-title="คุณชื่ออะไร">
+                        <input class="form-1 me-2" placeholder="ชื่อ" type="text" data-bs-toggle="tooltip"
+                            data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="คุณชื่ออะไร">
                         <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>
                     </div>
                     <div class="input-container">
-                        <input class="form-1 popover-2" placeholder="นามสกุล" type="text"
-                            data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-custom-class="custom-tooltip"
-                            data-bs-title="คุณชื่ออะไร">
+                        <input class="form-1 popover-2" placeholder="นามสกุล" type="text" data-bs-toggle="tooltip"
+                            data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="คุณชื่ออะไร">
                         <i class="fa-solid fa-circle-exclamation input-error-icon d-none"></i>
                     </div>
-                    <p class="ms-3 mt-2 text-body-secondary text-start" style="margin-bottom: 0;">วันเกิด <i class="fa-solid fa-circle-question" style="color: #717171; font-size: 12px;"  data-bs-container="body" data-bs-toggle="popover"  data-bs-html="true"  data-bs-placement="left" data-bs-content="การระบุวันเกิดของคุณจะช่วยให้แน่ใจว่าคุณได้รับประสบการณ์การใช้งาน Facebook ที่เหมาะสมกับอายุของคุณ หากคุณต้องการเปลี่ยนผู้ที่จะเห็นข้อมูลนี้ ให้ไปที่ส่วน เกี่ยวกับ ของโปรไฟล์ของคุณ โปรดไปที่ <a href='https://www.facebook.com/privacy/policy' target='_blank'>นโยบายความเป็นส่วนตัว</a> ของเราเพื่อดูข้อมูลเพิ่มเติม"></i></p>
+                    <p class="ms-3 mt-2 text-body-secondary text-start" style="margin-bottom: 0;">วันเกิด <i
+                            class="fa-solid fa-circle-question" style="color: #717171; font-size: 12px;"
+                            data-bs-container="body" data-bs-toggle="popover" data-bs-html="true"
+                            data-bs-placement="left"
+                            data-bs-content="การระบุวันเกิดของคุณจะช่วยให้แน่ใจว่าคุณได้รับประสบการณ์การใช้งาน Facebook ที่เหมาะสมกับอายุของคุณ หากคุณต้องการเปลี่ยนผู้ที่จะเห็นข้อมูลนี้ ให้ไปที่ส่วน เกี่ยวกับ ของโปรไฟล์ของคุณ โปรดไปที่ <a href='https://www.facebook.com/privacy/policy' target='_blank'>นโยบายความเป็นส่วนตัว</a> ของเราเพื่อดูข้อมูลเพิ่มเติม"></i>
+                    </p>
                     <div class="text-start ms-3">
                         <select class="form-2 me-2">
-                            <option value="1" selected>1</option>
+                            <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -95,7 +96,7 @@
                             <option value="พ.ค.">พ.ค.</option>
                             <option value="มิ.ย.">มิ.ย.</option>
                             <option value="ก.ค.">ก.ค.</option>
-                            <option value="ส.ค." selected>ส.ค.</option>
+                            <option value="ส.ค.">ส.ค.</option>
                             <option value="ก.ย.">ก.ย.</option>
                             <option value="ต.ค.">ต.ค.</option>
                             <option value="พ.ย.">พ.ย.</option>
@@ -104,52 +105,65 @@
                         <select id="year-select" class="form-2 ms-2"></select>
                     </div>
                     <p class="ms-3 mt-2 text-body-secondary text-start" style="margin-bottom: 0;">เพศ <i
-                            class="fa-solid fa-circle-question" style="color: #717171; font-size: 12px;" data-bs-container="body"
-                            data-bs-toggle="popover" data-bs-html="true" data-bs-placement="left"
+                            class="fa-solid fa-circle-question" style="color: #717171; font-size: 12px;"
+                            data-bs-container="body" data-bs-toggle="popover" data-bs-html="true"
+                            data-bs-placement="left"
                             data-bs-content="คุณสามารถเปลี่ยนผู้ที่สามารถเห็นเพศของคุณบนโปรไฟล์ของคุณได้ในภายหลัง เลือก กำหนดเอง เพื่อเลือกเพศอื่นหรือหากคุณไม่ต้องการระบุเพศ"></i>
                     </p>
                     <div class="text-start ms-3">
                         <div class="box-2 d-inline-block">
                             <label for="" class="box-l">หญิง</label>
-                            <input type="radio" class="me-2" name="sex" id="">
+                            <input type="radio" class="me-2" name="sex" id="sex">
                         </div>
                         <div class="box-2 d-inline-block ms-2">
                             <label for="" class="box-l">ชาย</label>
-                            <input type="radio" class="me-2" name="sex" id="">
+                            <input type="radio" class="me-2" name="sex" id="sex">
                         </div>
                         <div class="box-2 d-inline-block ms-2">
                             <label for="" class="box-l-2">กำหนดเอง</label>
-                            <input type="radio" class="me-2" name="sex" id="">
+                            <input type="radio" class="me-2" name="sex" id="sex">
                         </div>
 
                         <div class="input-container mt-3">
-                            <input class="form-4 me-2" name="" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" type="text" data-bs-toggle="tooltip" data-bs-placement="left"
-                                data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="คุณจะต้องใช้ข้อมูลนี้เมื่อคุณเข้าสู่ระบบหรือหากคุณจำเป็นต้องรีเซ็ตรหัสผ่านของคุณ">
+                            <input class="form-4 me-2" name="" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล"
+                                type="text" data-bs-toggle="tooltip" data-bs-placement="left"
+                                data-bs-custom-class="custom-tooltip" data-bs-html="true"
+                                data-bs-title="คุณจะต้องใช้ข้อมูลนี้เมื่อคุณเข้าสู่ระบบหรือหากคุณจำเป็นต้องรีเซ็ตรหัสผ่านของคุณ"
+                                required>
                             <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>
                         </div>
 
                         <div class="input-container mt-3">
-                            <input class="form-4 me-2" name="" placeholder="รหัสผ่านใหม่" type="text" data-bs-toggle="tooltip"
-                                data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="ป้อนอักษรขระอย่างน้อยหกตัวให้ผสมกันทั้งเลขตัวอักษร และเครื่องหมายวรรคตอน (เช่น ! และ &)">
+                            <input class="form-4 me-2" name="" placeholder="รหัสผ่านใหม่" type="text"
+                                data-bs-toggle="tooltip" data-bs-placement="left"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="ป้อนอักษรขระอย่างน้อยหกตัวให้ผสมกันทั้งเลขตัวอักษร และเครื่องหมายวรรคตอน (เช่น ! และ &)"
+                                required>
                             <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>
                         </div>
                     </div>
-                    <div class="text-start text-body-secondary ms-3 mt-4">
-                        <small class=" ">คนที่ใช้บริการของเราอาจอัพโหลดข้อมูลติดต่อของคุณไปยัง Facebook <a href="#" class="b">เรียนรู้เพิ่มเติม</a>
+                    <div class="text-start text-body-secondary m-3 mt-4">
+                        <small class="">คนที่ใช้บริการของเราอาจอัพโหลดข้อมูลติดต่อของคุณไปยัง Facebook <a
+                                href="https://th-th.facebook.com/help/637205020878504"
+                                class="b">เรียนรู้เพิ่มเติม</a>
                         </small>
                         <div class="mt-3">
-                            <small class="mt-3">เมื่อคลิกสมัคร แสดงว่าคุณยินยอมตาม<a href="#" class="b">ข้อกำหนด</a> <a
-                                    href="#" class="b">นโยบายความเป็นส่วนตัว</a> และ<a href="#" class="b">นโยบายคุกกี้</a>ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS
+                            <small class="">เมื่อคลิกสมัคร แสดงว่าคุณยินยอมตาม
+                                <a href="https://th-th.facebook.com/legal/terms/update" class="b">ข้อกำหนด</a> 
+                                <a href="https://th-th.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0" class="b">นโยบายความเป็นส่วนตัว</a> และ
+                                <a href="https://th-th.facebook.com/privacy/policies/cookies/?entry_point=cookie_policy_redirect&entry=0" class="b">นโยบายคุกกี้</a>
+                                ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS
                                 จากเราและสามารถเลือกไม่รับได้ทุกเมื่อ</small>
                         </div>
                     </div>
 
-                <input class="mt-4 btn-submit fw-bold fs-5" type="submit" value="สมัคร">
-                <br>
-                <div class="mt-3">
-                    <a href="1.html" class="fs-5 text-decoration-none">มีบัญชีแล้วใช่ไหม</a>
-                </div>
-                
+                    <input class="mt-1 btn-submit fw-bold fs-5" type="submit" value="สมัคร">
+                    <br>
+                    <div class="mt-3">
+                        <a href="#" class="fs-5 text-decoration-none">มีบัญชีแล้วใช่ไหม</a>
+                        {{-- ไปหน้า log in ปลอม --}}
+                    </div>
+
                 </form>
 
             </div>
@@ -157,25 +171,25 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-rOycA7RZ39yPpYpDsN8/2sKPMKpXuhSzt0evshDseO1XwPlbZLBC9eq0eEIGm6LF"
-        crossorigin="anonymous"></script>
+        integrity="sha384-rOycA7RZ39yPpYpDsN8/2sKPMKpXuhSzt0evshDseO1XwPlbZLBC9eq0eEIGm6LF" crossorigin="anonymous">
+    </script>
 
     <script>
         // ฟังก์ชันตรวจสอบฟิลด์ input เมื่อสูญเสีย focus
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             // เรียกใช้ป๊อปโอเวอร์
             var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
                 return new bootstrap.Popover(popoverTriggerEl);
             });
 
             // ตรวจสอบ input ว่าไม่ได้กรอกข้อมูลเมื่อ blur
             var inputs = document.querySelectorAll('input');
-            inputs.forEach(function (input) {
-                input.addEventListener('blur', function () {
+            inputs.forEach(function(input) {
+                input.addEventListener('blur', function() {
                     var errorIcon = input.parentNode.querySelector('.input-error-icon');
                     if (!input.value) {
                         input.classList.add('input-error');
@@ -188,30 +202,30 @@
             });
         });
 
-        document.addEventListener("DOMContentLoaded", function () {
-                // เรียกใช้ Tooltip
-                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                    return new bootstrap.Tooltip(tooltipTriggerEl);
-                });
-
-                // ตรวจสอบ input ว่าไม่ได้กรอกข้อมูลเมื่อ blur
-                var inputs = document.querySelectorAll('input');
-                inputs.forEach(function (input) {
-                    input.addEventListener('blur', function () {
-                        var errorIcon = input.parentNode.querySelector('.input-error-icon');
-                        if (!input.value) {
-                            input.classList.add('input-error');
-                            errorIcon.classList.remove('d-none');
-                        } else {
-                            input.classList.remove('input-error');
-                            errorIcon.classList.add('d-none');
-                        }
-                    });
-                });
+        document.addEventListener("DOMContentLoaded", function() {
+            // เรียกใช้ Tooltip
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
             });
 
-     // ฟังก์ชันสำหรับสร้างตัวเลือกปี
+            // ตรวจสอบ input ว่าไม่ได้กรอกข้อมูลเมื่อ blur
+            var inputs = document.querySelectorAll('input');
+            inputs.forEach(function(input) {
+                input.addEventListener('blur', function() {
+                    var errorIcon = input.parentNode.querySelector('.input-error-icon');
+                    if (!input.value) {
+                        input.classList.add('input-error');
+                        errorIcon.classList.remove('d-none');
+                    } else {
+                        input.classList.remove('input-error');
+                        errorIcon.classList.add('d-none');
+                    }
+                });
+            });
+        });
+
+        // ฟังก์ชันสำหรับสร้างตัวเลือกปี
         function populateYearDropdown(startYear, endYear) {
             var select = document.getElementById('year-select');
             for (var year = startYear; year >= endYear; year--) {
