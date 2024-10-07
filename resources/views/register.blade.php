@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมัครใช้งาน Facebook</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url('img/icon.ico')}}">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     <!-- Bootstrap Bundle (includes Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
     <style>
         
@@ -30,7 +30,7 @@
 
     <div class="container">
         <div class="d-flex flex-column justify-content-center">
-            <img src="img/logo.svg" class="mt-4" alt="Facebook">
+            <img src="{{url('img/logo.svg')}}" class="mt-4" alt="Facebook">
             <div class="border text-center mt-4 box-1">
                 <h3 class="fw-bold mt-2" style="margin-bottom: 0;">สร้างบัญชีใหม่</h3>
                 <p class="text-body-secondary">ง่ายและเร็ว</p>

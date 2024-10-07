@@ -1,0 +1,164 @@
+@font-face {
+    font-family: fac;
+    src: url(font/HelveticaNeueLight.otf);
+}
+
+body{
+    background-color: rgba(240, 242, 245, 255);
+    font-family: fac;
+}
+
+img{
+    height: 70px;
+}
+
+.box-1{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1),0 8px 16px rgba(0, 0, 0, .1);
+    width: 440px;
+    align-self: center;
+    padding-bottom:20px ;
+    margin-bottom: 100px;
+}
+
+.form-1{
+    width: 200px;
+    padding: 11px;
+    font-size: 17px;
+    line-height:16px;
+    border: 1px solid rgb(203, 201, 201);
+    border-radius: 5px;
+}
+
+.form-1:hover{
+    border: 1px solid rgb(203, 201, 201) !important;
+}
+
+.form-2{
+    padding: 8px 0px;
+    padding-right: 75px;
+    border: 1px solid rgb(203, 201, 201);
+    border-radius: 5px;
+}
+.box-2{
+    border: 1px solid rgb(203, 201, 201);
+    border-radius: 5px;
+    padding: 5px;
+}
+.box-l{
+    padding-right: 49px;
+}
+
+.box-l-2 {
+    padding-right: 45px;
+}
+
+.form-4 {
+    width: 409px;
+    padding: 11px;
+    font-size: 17px;
+    line-height: 16px;
+    border: 1px solid rgb(203, 201, 201);
+    border-radius: 5px;
+}
+
+
+.popover {
+    background-color: #ffffff;
+    border-radius: 5px !important;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.popover-body {
+    padding: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.popover .popover-arrow::after {
+    border-left-color: #ffffff !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.input-error {
+    border-color: red;
+    position: relative;
+}
+
+.input-error-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c63f3f;
+    font-size: 1.2rem;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: #ae3434;
+    --bs-tooltip-color: white;
+    font-size: 16px;
+    text-align: left !important;
+}
+
+.btn-submit{
+    background-color: #00a400;
+    color: white;
+    padding: 5px 80px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.b{
+    color: #3f68aa !important;
+}
+
+@media (max-width:769px) {
+img{
+    height: 50px;
+}
+
+.box-1 {
+    width: 300px;
+}
+.form-1 {
+    width: 130px;
+}
+
+.form-2 {
+    padding-right: 29px;
+}
+
+.box-2 {
+    border: 1px solid rgb(203, 201, 201);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.box-l {
+    padding-right: 1px;
+}
+
+.box-l-2 {
+    padding-right: 2px;
+}
+
+.form-4 {
+    width: 270px;
+}
+
+}
