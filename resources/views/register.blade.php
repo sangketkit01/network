@@ -154,9 +154,11 @@
 
             </div>
         </div>
+        
     </div>
 
-    <footer class="pc">
+    <div>
+        <footer class="" style="width: 100vw">
         <ul>
             <li style="color: black;">English (UK)</li>
             <li>ภาษาไทย</li>
@@ -211,6 +213,8 @@
         <p class="ms-4" style="color: black;">Meta © 2024</p>
         <br>
     </footer>
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
