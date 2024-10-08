@@ -118,7 +118,7 @@
                             <input type="radio" class="me-2" name="sex" id="">
                         </div>
                         <div class="box-2 d-inline-block ms-2">
-                            <label for="" class="box-l-2">กำหนดเอง</label>
+                            <label for="" class="box-l-2">ไม่ระบุ</label>
                             <input type="radio" class="me-2" name="sex" id="">
                         </div>
 
@@ -134,7 +134,7 @@
                             <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>
                         </div>
                     </div>
-                    <div class="text-start text-body-secondary ms-3 mt-4">
+                    <div class="text-start text-body-secondary ms-3 mt-4 me-3">
                         <small class=" ">คนที่ใช้บริการของเราอาจอัพโหลดข้อมูลติดต่อของคุณไปยัง Facebook <a href="#" class="b">เรียนรู้เพิ่มเติม</a>
                         </small>
                         <div class="mt-3">
@@ -147,7 +147,7 @@
                 <input class="mt-4 btn-submit fw-bold fs-5" type="submit" value="สมัคร">
                 <br>
                 <div class="mt-3">
-                    <a href="1.html" class="fs-5 text-decoration-none">มีบัญชีแล้วใช่ไหม</a>
+                    <a href="/login" class="fs-5 text-decoration-none">มีบัญชีแล้วใช่ไหม</a>
                 </div>
                 
                 </form>
@@ -155,6 +155,62 @@
             </div>
         </div>
     </div>
+
+    <footer class="pc">
+        <ul>
+            <li style="color: black;">English (UK)</li>
+            <li>ภาษาไทย</li>
+            <li>日本語</li>
+            <li>中文(简体)</li>
+            <li>Tiếng Việt</li>
+            <li>Français (France)</li>
+            <li>Deutsch</li>
+            <li>Русский</li>
+            <li>Español</li>
+            <li>Português (Brasil)</li>
+            <li>Italiano</li>
+        </ul>
+        <hr>
+        <ul class="des">
+            <li>Sign Up</li>
+            <li>Log in</li>
+            <li>Messenger</li>
+            <li>Facebook Lite</li>
+            <li>Video</li>
+            <li>Places</li>
+            <li>Games</li>
+            <li>Marketplace</li>
+            <li>Meta Pay</li>
+            <li>Meta Store</li>
+            <li>Meta Quest</li>
+            <li>Ray-Ban Meta</li>
+            <li>Meta AI</li>
+            <li>Instagram</li>
+            <li>Threads</li>
+            <li>Fundraisers</li>
+            <li>Services</li>
+            <li>Voting Information Centre</li>
+            <li>Privacy Policy</li>
+            <li>Privacy Centre</li>
+            <li>Groups</li>
+            <li>About</li>
+            <li>Create ad</li>
+            <li>Create Page</li>
+            <li>Developers</li>
+            <li>Careers</li>
+            <li>Cookies</li>
+            <li>AdChoices</li>
+            <li>Terms</li>
+            <li>Help</li>
+            <li>Contact uploading and non-users</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <br>
+        <p class="ms-4" style="color: black;">Meta © 2024</p>
+        <br>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

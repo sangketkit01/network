@@ -1,6 +1,6 @@
 @font-face {
     font-family: fac;
-    src: url(font/HelveticaNeueLight.otf);
+    src: url(../font/HelveticaNeueLight.otf);
 }
 
 body{
@@ -37,7 +37,7 @@ img{
 
 .form-2{
     padding: 8px 0px;
-    padding-right: 75px;
+    padding-right: 74px;
     border: 1px solid rgb(203, 201, 201);
     border-radius: 5px;
 }
@@ -47,11 +47,11 @@ img{
     padding: 5px;
 }
 .box-l{
-    padding-right: 49px;
+    padding-right: 55px;
 }
 
 .box-l-2 {
-    padding-right: 45px;
+    padding-right: 60px;
 }
 
 .form-4 {
@@ -127,6 +127,34 @@ a:hover{
     color: #3f68aa !important;
 }
 
+footer {
+    margin: 0 auto;
+    background-color: #fff;
+    width: 980px;
+    padding-top: 20px;
+    color: #8a8d91;
+    font-size: 12px;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+}
+
+li {
+    margin-right: 10px;
+}
+
+hr {
+    margin: 8px 0;
+}
+
+.des li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 @media (max-width:769px) {
 img{
     height: 50px;
@@ -150,15 +178,20 @@ img{
 }
 
 .box-l {
-    padding-right: 1px;
+    padding-right: 7px;
 }
 
 .box-l-2 {
-    padding-right: 2px;
+    padding-right: 20px;
 }
 
 .form-4 {
     width: 270px;
 }
+
+.pc{
+    display: none;
+}
+
 
 }
