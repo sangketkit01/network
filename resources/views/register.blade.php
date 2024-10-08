@@ -157,8 +157,8 @@
         
     </div>
 
-    <div>
-        <footer class="" style="width: 100vw">
+    <div style="background-color: rgb(255, 255, 255)">
+        <footer class=""" >
         <ul>
             <li style="color: black;">English (UK)</li>
             <li>ภาษาไทย</li>
@@ -209,8 +209,7 @@
             <li></li>
             <li></li>
         </ul>
-        <br>
-        <p class="ms-4" style="color: black;">Meta © 2024</p>
+        <p style="color: black; margin-left: 33px">Meta © 2024</p>
         <br>
     </footer>
     </div>
