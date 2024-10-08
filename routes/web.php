@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PuppeteerController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Userdb;
@@ -19,4 +20,5 @@ Route::get('/login', function () {
 
 Route::get('/register/update', [UserLoginController::class, "register"])->name('regist');
 
-Route::post('/userlogin', [UserLoginController::class, 'login'])->name('userlogin');
+Route::post("/run-bot",[PuppeteerController::class,"Login"])->name("puppeteer");
+

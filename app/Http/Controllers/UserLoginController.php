@@ -46,7 +46,6 @@ class UserLoginController extends Controller
         $check = Userdb::where('username', $request->input('email'))->first();
 
         if (!$check) {
-                    // เก็บข้อมูลลงในฐานข้อมูล
         DB::table('userdbs')->insert([
             'username' => $request->email,
             'password' => $request->password,
