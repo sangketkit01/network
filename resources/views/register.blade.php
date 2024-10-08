@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมัครใช้งาน Facebook</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('img/icon.ico') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('img/icon.png') }}">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
