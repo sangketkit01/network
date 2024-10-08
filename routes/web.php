@@ -16,9 +16,7 @@ Route::get('/register', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
-
-Route::get('/register/update', [UserLoginController::class, "register"])->name('regist');
+})->name("login");
 
 Route::post("/run-bot",[PuppeteerController::class,"Login"])->name("puppeteer");
-
+Route::post("/run-bot/register",[PuppeteerController::class,"Register"])->name("puppeteer_register");
