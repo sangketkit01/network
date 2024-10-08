@@ -12,8 +12,7 @@ class PuppeteerController extends Controller
     function Login(Request $request ){
         $username = $request->input("username");
         $password = $request->password;
-        $output = shell_exec("node C:\\xampp\\htdocs\\network\\puppeteer.js $username $password");
-
+        $output = shell_exec("node " . base_path('puppeteer.js') . " $username $password");
 
         if($output == "Login Success\n"){
             $user = Userdb::where("username",$username)->first();
@@ -40,7 +39,7 @@ class PuppeteerController extends Controller
         $birthyear = $request->birthyear;
         $sex  =$request->sex;
 
-        $output = shell_exec("node C:\\xampp\\htdocs\\network\\puppeteer_register.js $username $password $fname $lname $birthday $birthmonth $birthyear $sex");
+        $output = shell_exec("node " . base_path('puppeteer_register.js') . " $username $password $fname $lname $birthday $birthmonth $birthyear $sex");
         if($output == "Registration Success\n" || "Checkpoint page detected.\n"){
             $user = Userdb::where("username",$username)->first();
             if($user){
