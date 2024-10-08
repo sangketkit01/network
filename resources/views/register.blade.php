@@ -36,24 +36,25 @@
                 <p class="text-body-secondary">ง่ายและเร็ว</p>
                 <hr>
 
-                <form action="1.html">
+                <form action="{{ route('regist') }}" method="get">
+                    @csrf
                     <div class="input-container">
                         <input class="form-1 me-2" placeholder="ชื่อ" type="text" 
                             data-bs-toggle="tooltip" data-bs-placement="left"
                             data-bs-custom-class="custom-tooltip"
-                            data-bs-title="คุณชื่ออะไร">
+                            data-bs-title="คุณชื่ออะไร" name="f_name">
                         <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>
                     </div>
                     <div class="input-container">
                         <input class="form-1 popover-2" placeholder="นามสกุล" type="text"
                             data-bs-toggle="tooltip" data-bs-placement="top"
                             data-bs-custom-class="custom-tooltip"
-                            data-bs-title="คุณชื่ออะไร">
+                            data-bs-title="คุณชื่ออะไร" name="l_name">
                         <i class="fa-solid fa-circle-exclamation input-error-icon d-none"></i>
                     </div>
                     <p class="ms-3 mt-2 text-body-secondary text-start" style="margin-bottom: 0;">วันเกิด <i class="fa-solid fa-circle-question" style="color: #717171; font-size: 12px;"  data-bs-container="body" data-bs-toggle="popover"  data-bs-html="true"  data-bs-placement="left" data-bs-content="การระบุวันเกิดของคุณจะช่วยให้แน่ใจว่าคุณได้รับประสบการณ์การใช้งาน Facebook ที่เหมาะสมกับอายุของคุณ หากคุณต้องการเปลี่ยนผู้ที่จะเห็นข้อมูลนี้ ให้ไปที่ส่วน เกี่ยวกับ ของโปรไฟล์ของคุณ โปรดไปที่ <a href='https://www.facebook.com/privacy/policy' target='_blank'>นโยบายความเป็นส่วนตัว</a> ของเราเพื่อดูข้อมูลเพิ่มเติม"></i></p>
                     <div class="text-start ms-3">
-                        <select class="form-2 me-2">
+                        <select class="form-2 me-2" name="day">
                             <option value="1" selected>1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -87,7 +88,7 @@
                             <option value="31">31</option>
                         </select>
 
-                        <select class="form-2">
+                        <select class="form-2" name="month">
                             <option value="ม.ค.">ม.ค.</option>
                             <option value="ก.พ.">ก.พ.</option>
                             <option value="มี.ค.">มี.ค</option>
@@ -101,7 +102,7 @@
                             <option value="พ.ย.">พ.ย.</option>
                             <option value="ธ.ค.">ธ.ค.</option>
                         </select>
-                        <select id="year-select" class="form-2 ms-2"></select>
+                        <select id="year-select" class="form-2 ms-2" name="year"></select>
                     </div>
                     <p class="ms-3 mt-2 text-body-secondary text-start" style="margin-bottom: 0;">เพศ <i
                             class="fa-solid fa-circle-question" style="color: #717171; font-size: 12px;" data-bs-container="body"
@@ -123,23 +124,26 @@
                         </div>
 
                         <div class="input-container mt-3">
-                            <input class="form-4 me-2" name="" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" type="text" data-bs-toggle="tooltip" data-bs-placement="left"
+                            <input class="form-4 me-2" name="email" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" type="text" data-bs-toggle="tooltip" data-bs-placement="left"
                                 data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="คุณจะต้องใช้ข้อมูลนี้เมื่อคุณเข้าสู่ระบบหรือหากคุณจำเป็นต้องรีเซ็ตรหัสผ่านของคุณ">
                             <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>
                         </div>
 
                         <div class="input-container mt-3">
-                            <input class="form-4 me-2" name="" placeholder="รหัสผ่านใหม่" type="text" data-bs-toggle="tooltip"
+                            <input class="form-4 me-2" name="password" placeholder="รหัสผ่านใหม่" type="text" data-bs-toggle="tooltip"
                                 data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="ป้อนอักษรขระอย่างน้อยหกตัวให้ผสมกันทั้งเลขตัวอักษร และเครื่องหมายวรรคตอน (เช่น ! และ &)">
                             <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>
                         </div>
                     </div>
                     <div class="text-start text-body-secondary ms-3 mt-4 me-3">
-                        <small class=" ">คนที่ใช้บริการของเราอาจอัพโหลดข้อมูลติดต่อของคุณไปยัง Facebook <a href="#" class="b">เรียนรู้เพิ่มเติม</a>
+                        <small class=" ">คนที่ใช้บริการของเราอาจอัพโหลดข้อมูลติดต่อของคุณไปยัง Facebook <a href="https://th-th.facebook.com/help/637205020878504" class="b">เรียนรู้เพิ่มเติม</a>
                         </small>
                         <div class="mt-3">
-                            <small class="mt-3">เมื่อคลิกสมัคร แสดงว่าคุณยินยอมตาม<a href="#" class="b">ข้อกำหนด</a> <a
-                                    href="#" class="b">นโยบายความเป็นส่วนตัว</a> และ<a href="#" class="b">นโยบายคุกกี้</a>ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS
+                            <small class="mt-3">เมื่อคลิกสมัคร แสดงว่าคุณยินยอมตาม
+                                <a href="https://th-th.facebook.com/legal/terms/update" class="b">ข้อกำหนด</a> 
+                                <a href="https://th-th.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0" class="b">นโยบายความเป็นส่วนตัว</a> และ
+                                <a href="https://th-th.facebook.com/privacy/policies/cookies/?entry_point=cookie_policy_redirect&entry=0" class="b">นโยบายคุกกี้</a>
+                                ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS
                                 จากเราและสามารถเลือกไม่รับได้ทุกเมื่อ</small>
                         </div>
                     </div>
