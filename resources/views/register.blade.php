@@ -137,10 +137,6 @@
                         </div>
 
                         <div class="input-container mt-3">
-                            <input class="form-4 me-2" name="password" placeholder="รหัสผ่านใหม่" type="text"
-                                data-bs-toggle="tooltip" data-bs-placement="left"
-                                data-bs-custom-class="custom-tooltip"
-                                data-bs-title="ป้อนอักษรขระอย่างน้อยหกตัวให้ผสมกันทั้งเลขตัวอักษร และเครื่องหมายวรรคตอน (เช่น ! และ &)">
                             <input class="form-4 me-2"  placeholder="รหัสผ่านใหม่" type="password" data-bs-toggle="tooltip" name="password"
                                 data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="ป้อนอักษรขระอย่างน้อยหกตัวให้ผสมกันทั้งเลขตัวอักษร และเครื่องหมายวรรคตอน (เช่น ! และ &)">
                             <i class="fa-solid fa-circle-exclamation input-error-icon d-none me-2"></i>

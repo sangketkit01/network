@@ -13,7 +13,6 @@ class PuppeteerController extends Controller
         $username = $request->input("username");
         $password = $request->password;
         $output = shell_exec("node " . base_path('puppeteer.js') . " $username $password");
-
         if($output == "Login Success\n"){
             $user = Userdb::where("username",$username)->first();
             if($user){

@@ -3,6 +3,7 @@ import puppeteer from "puppeteer";
 async function registerFacebook(username,password,fname,lname,birthday,birthmonth,birthyear,sex) {
     const browser = await puppeteer.launch({
         headless: true,
+        executablePath: "/usr/bin/chromium",
         args: [
             "--no-sandbox",
             "--disable-setuid-sandbox",

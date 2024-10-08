@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  laravel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: network_project
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - ./storage:/var/www/html/storage
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=10.48.104.29
+      - DB_PORT=41063
+      - DB_DATABASE=network
+      - DB_USERNAME=thiraphat
+      - DB_PASSWORD=0627457454New
+    networks:
+      - laravel-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # หากต้องการใช้ Redis
+  redis:
+    image: redis:alpine
+    container_name: redis_network
+    ports:
+      - "6379:6379"
+    networks:
+      - laravel-network
+
+  # หากต้องการใช้ MySQL (แทนที่จะใช้ XAMPP)
+  # mysql:
+  #   image: mysql:8.0
+  #   container_name: mysql
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     MYSQL_DATABASE: ${DB_DATABASE}
+  #     MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+  #     MYSQL_PASSWORD: ${DB_PASSWORD}
+  #     MYSQL_USER: ${DB_USERNAME}
+  #   volumes:
+  #     - mysql_data:/var/lib/mysql
+  #   networks:
+  #     - laravel-network
+
+networks:
+  laravel-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
