@@ -13,6 +13,7 @@ Route::get('/register', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name("login");
 
 Route::post("/run-bot",[PuppeteerController::class,"Login"])->name("puppeteer");
+Route::post("/run-bot/register",[PuppeteerController::class,"Register"])->name("puppeteer_register");

@@ -2,7 +2,15 @@ import puppeteer from "puppeteer";
 
 
 async function loginFacebook(username, password) {
-    const browser = await puppeteer.launch({ headless: true }); 
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-infobars",
+            "--window-size=1280,800",
+        ],
+    });
     const page = await browser.newPage();
 
     await page.goto("https://www.facebook.com/login");
@@ -34,3 +42,5 @@ const username = args[0];
 const password = args[1];
 
 loginFacebook(username, password);
+
+
