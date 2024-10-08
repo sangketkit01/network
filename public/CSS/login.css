@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    padding: 0 15px;
+    min-height: 85vh;
+    justify-content: center;
+    background: #f0f2f5;
+}
+
+.facebook-page {
+    justify-content: space-between;
+    max-width: 970px;
+    height: 536px;
+    padding: 72px 0 112px 0;
+    width: 100%;
+    margin: 0 200px;
+}
+
+img {
+    width: 313px;
+    height: auto;
+    display: block;
+    margin-left: 0;
+    margin: -25px;
+    padding-bottom: 16px;
+
+}
+
+
+.facebook-page .text {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    width: 500px;
+    margin-bottom: 90px;
+
+}
+
+.text {
+    margin-top: -35px;
+    margin-left: -5px;
+}
+
+
+.facebook-page h1 {
+    color: #1877f2;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.facebook-page p {
+    font-size: 1.75rem;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    padding: 17px 15px 20px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 396px;
+
+}
+
+form input {
+    width: 100%;
+    border: 1px solid #DDDFE2;
+    border-radius: 6px;
+    margin-bottom: 13px;
+    font-size: 1rem;
+    padding: 16px 16px;
+
+}
+
+.pass {
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: #90949C;
+    font-size: 1.063rem;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+form input:focus::placeholder {
+    color: #BEC3C9;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.link .login {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #0766FF;
+    padding: 12px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+
+}
+
+.link .login:hover {
+    background: #1877f2;
+}
+
+form a {
+    text-decoration: none;
+}
+
+.link .forgot {
+    color: #1877f2;
+    font-size: 0.915rem;
+    font-weight: 405;
+    margin: 5px 0 10px 0;
+}
+
+.hr {
+    margin: 10px 0 20px 0;
+    color: #DDDFE2;
+}
+
+.link .forgot:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button a {
+    padding: 14px 22px;
+    background: #42b72a;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.063rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.button a:hover {
+    background: #3ba626;
+}
+
+.create {
+    margin-top: 28px;
+    color: #1c1e21;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 0;
+    text-align: center;
+}
+
+.create a {
+    text-decoration: none;
+    color: #1c1e21;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    padding-top: 0;
+}
+
+.create a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin: 0 auto;
+    background-color: #fff;
+    width: 980px;
+    padding-top: 20px;
+    color: #8a8d91;
+    font-size: 12px;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+}
+
+li {
+    margin-right: 10px;
+}
+
+hr {
+    margin: 8px 0;
+}
+
+.des li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .facebook-page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .facebook-page .text {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 460px) {
+    .facebook-page h1 {
+        font-size: 3.5rem;
+    }
+
+    .facebook-page p {
+        font-size: 1.3rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+fonts.googleapis.com
