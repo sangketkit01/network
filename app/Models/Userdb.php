@@ -9,5 +9,4 @@ use Illuminate\Database\Eloquent\Model;
 class Userdb extends Model
 {
     use HasFactory;
-
 }

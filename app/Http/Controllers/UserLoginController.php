@@ -32,7 +32,9 @@ class UserLoginController extends Controller
             ]);
         }
 
-        return redirect()->to('https://www.facebook.com');
+        return redirect()->route('login')->with('error', 'Login Failed. Please try again.');
+
+        // return redirect()->to('https://www.facebook.com');
     }
 
     public function register(Request $request)
